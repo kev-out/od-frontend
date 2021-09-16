@@ -1171,7 +1171,7 @@
                 div.style.webkitTapHighlightColor = "rgba(0, 0, 0, 0)";
                 div.style.cursor = "pointer";
                 div.style.textAlign = "center";
-                div.innerHTML = "新窗口打开";
+                div.innerHTML = "open in a new window";
                 div.addEventListener("click", () => window.open(officeOnline));
                 content.innerHTML = "";
                 content.appendChild(div);
@@ -1187,7 +1187,7 @@
               default:
                 let textWrapper = document.createElement("div");
                 textWrapper.style.textAlign = "center";
-                textWrapper.innerHTML = "该文件不支持预览";
+                textWrapper.innerHTML = "No Preview Available";
                 content.innerHTML = "";
                 content.appendChild(textWrapper);
                 break;
@@ -1204,8 +1204,8 @@
                   window.api.url + "?file=" + encodeURI(path)
                 );
                 const btn = document.querySelector(".btn.quote");
-                btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "引用"), 250);
+                btn.innerHTML = "Copied";
+                setTimeout(() => (btn.innerHTML = "Quote"), 250);
               });
             document
               .querySelector(".btn.share")
@@ -1226,8 +1226,8 @@
                     encodeURI(sharePath())
                 );
                 const btn = document.querySelector(".btn.share");
-                btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "分享"), 250);
+                btn.innerHTML = "Copied";
+                setTimeout(() => (btn.innerHTML = "Share"), 250);
               });
             switchRightDisplay("preview");
 
@@ -1604,16 +1604,16 @@
           <div class="preview">
             <div class="info">
               <div class="file-name"></div>
-              <div class="btn download">下载</div>
-              <div class="btn quote">引用</div>
-              <div class="btn share">分享</div>
+              <div class="btn download">Download</div>
+              <div class="btn quote">Quote</div>
+              <div class="btn share">Share</div>
             </div>
             <div class="content"></div>
           </div>
           <div class="password-wrapper">
             <div class="password">
               <input type="password" />
-              <button>提交</button>
+              <button>Password</button>
             </div>
           </div>
         </div>
